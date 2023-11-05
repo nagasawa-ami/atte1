@@ -1,0 +1,60 @@
+.header {
+    background: #ddd;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 15px;
+    max-width: 1230px;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header-utilities nav {
+    width: 18%;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-nav__link {
+    color: black;
+    text-decoration: none;
+}
+
+.header-nav__button {
+    border: none;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+.wrapper {
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    margin-top: 50px;
+    padding: 5px;
+    /* フッター内のテキスト色 */
+}
+
+footer {
+    padding: 0;
+}

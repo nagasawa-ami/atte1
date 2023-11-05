@@ -1,0 +1,70 @@
+.attendance__alert--success {
+    padding: 10px 30px;
+    border-color: #badbcc;
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.attendance__alert--danger {
+    padding: 10px 0;
+    border-color: #f5c2c7;
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+.attendance__alert--danger ul {
+    margin: 0;
+}
+
+
+.login_name{
+    margin: 0 auto;
+    text-align: center
+    ;
+}
+
+.attendance__content {
+    margin: 0 auto;
+    padding: 100px 100px;
+    background-color: #ddd;
+}
+
+
+.attendance__panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70% 70%;
+    margin: 0 auto;
+    text-align: center
+
+}
+
+.attendance__button {
+    width: 400px;
+    text-align: center;
+}
+
+.attendance__button-submit {
+    padding: 5px;
+    width: 400px;
+    height: 100px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    font-size: large;
+}
+
+
+.attendance__button-submit:disabled {
+    padding: 5px;
+        width: 400px;
+        height: 100px;
+        border: none;
+        border-radius: 3px;
+        background: #666;
+        color: #fff;
+        cursor: pointer;
+        font-size: large;
+}
