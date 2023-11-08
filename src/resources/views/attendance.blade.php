@@ -10,9 +10,9 @@
 
   {{-- "前へ" と "次へ" のリンク --}}
 <div class="date-pagination">
-    <a href="{{ route('report.list', ['date' => $prevDate]) }}">＜</a>
+    <a href="{{ route('report.list', ['date' => $prevDate]) }}"><</a>
     <span>{{ $date }}</span>
-    <a href="{{ route('report.list', ['date' => $nextDate]) }}">＞</a>
+    <a href="{{ route('report.list', ['date' => $nextDate]) }}">></a>
 </div>
 
 
