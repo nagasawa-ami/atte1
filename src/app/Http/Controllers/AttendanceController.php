@@ -51,9 +51,6 @@ class AttendanceController extends Controller
         $attendance = Attendance::where('user_id', Auth::id())->whereDate('date', Carbon::today())->firstOrFail();
     $ongoingBreak = BreakTime::where('attendance_id', $attendance->id)->whereNull('break_end')->first();
 
-    if ($ongoingBreak) {
-        return redirect()->route('attendance.index')->with('error', '休憩中は勤務を終了できません。');
-    }
 
     $attendance->work_end = Carbon::now();
     $attendance->save();

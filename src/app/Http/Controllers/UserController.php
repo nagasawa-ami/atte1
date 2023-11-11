@@ -10,10 +10,7 @@ use App\Models\BreakTime;
 
 class UserController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('index');
-    // }
+ 
 
     public function index()
 {
