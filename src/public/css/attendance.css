@@ -68,44 +68,41 @@
 }
 
 
-/* .pagination .relative{
+.pagination .relative{
     list-style: none;
     margin: 10px;
     padding: 10px;
-} */
+}
 
 
 .pagination a{
-    border: 1px solid #ddd;
-    width: 10px;
+    border: 2px solid #ddd;
 }
-
 
 
 .pagination nav {
     text-align: right;
     height: 50px;
-    width: 900px;
+    width: 850px;
 }
 
 .pagination div {
     text-align: right;
-        height: 10px;
-        width: 900px;
+    height: 10px;
+    width: 850px;
 }
-
 
 
 .pagination svg {
     width: 15px;
     height: 15px;
-    
-
 }
 
-.pagination>nav>div:first-child>span,
-.pagination>nav>div:last-child>span, 
 .pagination p  {
     display: none;
 }
 
+.flex-1 a,
+.flex-1 span {
+    display: none;
+}

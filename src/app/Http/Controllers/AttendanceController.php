@@ -10,6 +10,8 @@ use Carbon\Carbon;
 use Auth;
 
 
+
+
 class AttendanceController extends Controller
 {
     public function index()
@@ -50,6 +52,7 @@ class AttendanceController extends Controller
     {
         $attendance = Attendance::where('user_id', Auth::id())->whereDate('date', Carbon::today())->firstOrFail();
     $ongoingBreak = BreakTime::where('attendance_id', $attendance->id)->whereNull('break_end')->first();
+
 
 
     $attendance->work_end = Carbon::now();
