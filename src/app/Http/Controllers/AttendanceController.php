@@ -15,23 +15,23 @@ use Auth;
 class AttendanceController extends Controller
 {
     public function index()
-{
-    $this->checkAndSwitchToNextDay();
+    {
+        $this->checkAndSwitchToNextDay();
 
-    $date = Carbon::today();
-    $attendance = Attendance::where('user_id', Auth::id())->whereDate('date', $date)->first();
-    $ongoingBreak = null;
-    $isOnBreak = false;
+        $date = Carbon::today();
+        $attendance = Attendance::where('user_id', Auth::id())->whereDate('date', $date)->first();
+        $ongoingBreak = null;
+        $isOnBreak = false;
 
-    if ($attendance) {
-        $ongoingBreak = BreakTime::where('attendance_id', $attendance->id)->whereNull('break_end')->first();
-        if ($ongoingBreak) {
-            $isOnBreak = true;
+        if ($attendance) {
+            $ongoingBreak = BreakTime::where('attendance_id', $attendance->id)->whereNull('break_end')->first();
+            if ($ongoingBreak) {
+                $isOnBreak = true;
+            }
         }
-    }
 
-    return view('index', compact('attendance', 'ongoingBreak', 'isOnBreak'));
-}
+        return view('index', compact('attendance', 'ongoingBreak', 'isOnBreak'));
+    }
 
     public function startWork()
     {
@@ -51,14 +51,14 @@ class AttendanceController extends Controller
     public function endWork()
     {
         $attendance = Attendance::where('user_id', Auth::id())->whereDate('date', Carbon::today())->firstOrFail();
-    $ongoingBreak = BreakTime::where('attendance_id', $attendance->id)->whereNull('break_end')->first();
+        $ongoingBreak = BreakTime::where('attendance_id', $attendance->id)->whereNull('break_end')->first();
 
 
 
-    $attendance->work_end = Carbon::now();
-    $attendance->save();
+        $attendance->work_end = Carbon::now();
+        $attendance->save();
 
-    return redirect()->route('attendance.index')->with('message', '勤務を終了しました。');
+        return redirect()->route('attendance.index')->with('message', '勤務を終了しました。');
     }
 
 

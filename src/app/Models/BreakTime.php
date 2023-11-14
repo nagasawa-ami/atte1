@@ -20,3 +20,4 @@ class BreakTime extends Model
 
 
 }
+

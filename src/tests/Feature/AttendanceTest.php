@@ -16,8 +16,8 @@ class AttendanceTest extends TestCase
 
     public function setUp(): void
     {
-    parent::setUp();
-    Carbon::setTestNow(Carbon::now());
+        parent::setUp();
+        Carbon::setTestNow(Carbon::now());
     }
 
 
